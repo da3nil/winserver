@@ -1,0 +1,60 @@
+\documentclass[a4paper, 12pt]{report}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\author{Прытков Данил}
+
+\title{Windows server. Практическая работа №1}
+
+\date{\today}
+
+\begin{document} %
+	
+	\maketitle
+	\clearpage
+
+	\section{Комплектация задания}
+
+	\begin{enumerate}
+		\item Гипервизор VMware
+		\item Виртуальная машина с ОС Windows 10
+		\item Виртуальная машина с ОС Windows Server 2016 \texttt{(без GUI)}
+	\end{enumerate}
+
+	\section{Задачи}
+	
+	\subsubsection{Настройка SRV1}
+	
+	\begin{enumerate}
+		\item Базовая настройка
+		\begin{enumerate}
+			\item Переименовать компьютер в SRV1
+			\item Установить первый возможный адрес из адресного пространства 10.10.10.0
+			\item обеспечьте работоспособность протокола ICMP (для использования команды ping).
+		\end{enumerate}
+	\end{enumerate}
+
+	\subsubsection{Настройка CLI1}
+
+	\begin{enumerate}
+		\item Базовая настройка
+		\begin{enumerate}
+			\item Переименовать компьютер в CLI1
+			\item Установить второй возможный адрес из адресного пространства 10.10.10.0
+			\item обеспечьте работоспособность протокола ICMP (для использования команды ping).
+		\end{enumerate}
+	\end{enumerate}
+
+\end{document}
