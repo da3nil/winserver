@@ -30,7 +30,7 @@
 	\begin{enumerate}
 		\item Гипервизор VMware
 		\item Виртуальная машина с ОС Windows 10
-		\item Виртуальная машина с ОС Windows Server 2016 \texttt{(без GUI)}
+		\item Виртуальная машина с ОС Windows Server 2019 (без GUI)
 	\end{enumerate}
 
 	\section{Задачи}
@@ -41,8 +41,8 @@
 		\item Базовая настройка
 		\begin{enumerate}
 			\item Переименовать компьютер в SRV1
-			\item Установить первый возможный адрес из адресного пространства 10.10.10.0
-			\item обеспечьте работоспособность протокола ICMP (для использования команды ping).
+			\item Установить первый возможный адрес из адресного пространства 10.10.10.0/24
+			\item Обеспечьте работоспособность протокола ICMP (для использования команды ping).
 		\end{enumerate}
 	\end{enumerate}
 
@@ -52,9 +52,57 @@
 		\item Базовая настройка
 		\begin{enumerate}
 			\item Переименовать компьютер в CLI1
-			\item Установить второй возможный адрес из адресного пространства 10.10.10.0
-			\item обеспечьте работоспособность протокола ICMP (для использования команды ping).
+			\item Установить второй возможный адрес из адресного пространства 10.10.10.0/24
 		\end{enumerate}
 	\end{enumerate}
+
+	\clearpage
+	
+	\section{Решение}
+	
+	\subsection{Настройка локальной сети VMware}
+	
+	По умолчанию VMware создает одну NAT сеть между виртуальными машинами и сервером. Нам же нужно создать локальный сегмент между CLI1 и SRV1.
+	
+	Нажмите правой кнопкой мыши на виртуальную машину, выберете в контекстном меню "Параметры..."
+	
+	\begin{figure}[h]
+		\center{\includegraphics[scale=0.6]{1}}
+		\caption{123}
+		\label{fig:image}
+	\end{figure}
+
+	\clearpage
+
+	Откройте вкладку "Сетевой адаптер", нажмите на "Сегменты локальной сети...".
+
+	\begin{figure}[h]
+		\center{\includegraphics[scale=0.6]{2}}
+		\caption{123}
+		\label{fig:image}
+	\end{figure}
+
+	\clearpage
+
+	Добавьте новый сегмент "SRV1-CLI1".
+	
+	\begin{figure}[h]
+		\center{\includegraphics[scale=0.6]{3}}
+		\caption{123}
+		\label{fig:image}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\center{\includegraphics[scale=0.6]{4}}
+		\caption{123}
+		\label{fig:image}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\center{\includegraphics[scale=0.6]{5}}
+		\caption{123}
+		\label{fig:image}
+	\end{figure}
+	
 
 \end{document}
