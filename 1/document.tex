@@ -3,7 +3,15 @@
 \makeatletter
 \renewcommand{\@seccntformat}[1]{}
 \makeatother
+
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+
+\renewcommand{\theenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\theenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\theenumiii}{\arabic{enumiii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
 
 \usepackage{cmap}
 \usepackage[T2A]{fontenc}
@@ -44,16 +52,10 @@
 			\item Установить первый возможный адрес из адресного пространства 10.10.10.0/24;
 			\item Обеспечьте работоспособность протокола ICMP (для использования команды ping).
 		\end{enumerate}
-	\end{enumerate}
-
-	\begin{enumerate}
 		\item Active Directory
 		\begin{enumerate}
 			\item Сделайте сервер контроллером домена bask-rb.ru.
 		\end{enumerate}
-	\end{enumerate}
-
-	\begin{enumerate}
 		\item DHCP
 		\begin{enumerate}
 			\item настройте протокол DHCP для автоконфигурации клиентов – в качестве диапазона выдаваемых адресов используйте все не занятые серверами адреса в подсети.
@@ -82,7 +84,6 @@
 	
 	\begin{figure}[h]
 		\center{\includegraphics[scale=0.6]{1}}
-		\caption{123}
 		\label{fig:image}
 	\end{figure}
 
@@ -92,7 +93,6 @@
 
 	\begin{figure}[h]
 		\center{\includegraphics[scale=0.6]{2}}
-		\caption{123}
 		\label{fig:image}
 	\end{figure}
 
@@ -102,23 +102,16 @@
 	
 	\begin{figure}[h]
 		\center{\includegraphics[scale=0.6]{3}}
-		\caption{123}
 		\label{fig:image}
 	\end{figure}
 
-	В настройках виртуальных машин укажите сегмент локальной сети "SRV1-CLI1"
+	В настройках обеих виртуальных машин укажите сегмент локальной сети "SRV1-CLI1"
 	
 	\begin{figure}[h]
 		\center{\includegraphics[scale=0.6]{4}}
-		\caption{123}
 		\label{fig:image}
 	\end{figure}
 	
-	\begin{figure}[h]
-		\center{\includegraphics[scale=0.6]{5}}
-		\caption{123}
-		\label{fig:image}
-	\end{figure}
-	
+	\subsection{Настройка SRV1}
 
 \end{document}
