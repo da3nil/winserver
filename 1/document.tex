@@ -14,7 +14,7 @@
 \usepackage{graphicx}
 \graphicspath{{./images/}}
 
-\author{Прытков Данил}
+\author{ГАПОУ БАСК}
 
 \title{Windows server. Практическая работа №1}
 
@@ -30,7 +30,7 @@
 	\begin{enumerate}
 		\item Гипервизор VMware
 		\item Виртуальная машина с ОС Windows 10
-		\item Виртуальная машина с ОС Windows Server 2019 (без GUI)
+		\item Виртуальная машина с ОС Windows Server 2019
 	\end{enumerate}
 
 	\section{Задачи}
@@ -40,9 +40,23 @@
 	\begin{enumerate}
 		\item Базовая настройка
 		\begin{enumerate}
-			\item Переименовать компьютер в SRV1
-			\item Установить первый возможный адрес из адресного пространства 10.10.10.0/24
+			\item Переименовать компьютер в SRV1;
+			\item Установить первый возможный адрес из адресного пространства 10.10.10.0/24;
 			\item Обеспечьте работоспособность протокола ICMP (для использования команды ping).
+		\end{enumerate}
+	\end{enumerate}
+
+	\begin{enumerate}
+		\item Active Directory
+		\begin{enumerate}
+			\item Сделайте сервер контроллером домена bask-rb.ru.
+		\end{enumerate}
+	\end{enumerate}
+
+	\begin{enumerate}
+		\item DHCP
+		\begin{enumerate}
+			\item настройте протокол DHCP для автоконфигурации клиентов – в качестве диапазона выдаваемых адресов используйте все не занятые серверами адреса в подсети.
 		\end{enumerate}
 	\end{enumerate}
 
@@ -52,7 +66,7 @@
 		\item Базовая настройка
 		\begin{enumerate}
 			\item Переименовать компьютер в CLI1
-			\item Установить второй возможный адрес из адресного пространства 10.10.10.0/24
+			\item Настройте динамическую конфигурацию IP
 		\end{enumerate}
 	\end{enumerate}
 
@@ -91,6 +105,8 @@
 		\caption{123}
 		\label{fig:image}
 	\end{figure}
+
+	В настройках виртуальных машин укажите сегмент локальной сети "SRV1-CLI1"
 	
 	\begin{figure}[h]
 		\center{\includegraphics[scale=0.6]{4}}
